@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>まちのAI相談室 | 外壁塗装会社専門</title>
+  <title>まちのAI相談室 | 地方企業のAI導入・業務効率化・HP改善・SNS販促</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -15,19 +15,26 @@
     }
 
     :root {
-      --orange: #BA7517;
-      --orange-light: #d4891e;
-      --orange-pale: #FAEEDA;
-      --orange-pale2: #f5e2c8;
+      --blue: #1E6FD9;
+      --blue-dark: #1658b0;
+      --blue-light: #2B7FE8;
+      --blue-pale: #EBF3FF;
+      --blue-pale2: #D6E8FF;
+      --blue-border: #C7DDFF;
+      --pink: #C4447A;
+      --pink-pale: #FFF0F7;
+      --pink-border: #F4BDD8;
+      --green: #16A34A;
+      --green-pale: #F0FDF4;
+      --green-border: #BBF7D0;
       --white: #ffffff;
-      --text-main: #2c2c2c;
-      --text-sub: #666666;
-      --border: #e8d5b0;
+      --text-main: #1a1a2e;
+      --text-sub: #606080;
+      --border: #DDE4EF;
+      --bg-light: #F8FAFF;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Noto Sans JP', sans-serif;
@@ -36,14 +43,8 @@
       background: var(--white);
     }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    img {
-      max-width: 100%;
-    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; }
 
     /* ===== NAVIGATION ===== */
     header {
@@ -51,8 +52,8 @@
       top: 0;
       z-index: 100;
       background: var(--white);
-      border-bottom: 2px solid var(--orange-pale);
-      box-shadow: 0 2px 8px rgba(186, 117, 23, 0.08);
+      border-bottom: 2px solid var(--blue-pale);
+      box-shadow: 0 2px 8px rgba(30, 111, 217, 0.08);
     }
 
     nav {
@@ -75,37 +76,35 @@
     .nav-logo-main {
       font-size: 1.15rem;
       font-weight: 900;
-      color: var(--orange);
+      color: var(--blue);
       white-space: nowrap;
     }
 
     .nav-logo-sub {
-      font-size: 0.68rem;
+      font-size: 0.63rem;
       color: var(--text-sub);
       font-weight: 400;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.02em;
     }
 
     .nav-menu {
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: 24px;
       list-style: none;
     }
 
     .nav-menu a {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 500;
       color: var(--text-main);
       transition: color 0.2s;
     }
 
-    .nav-menu a:hover {
-      color: var(--orange);
-    }
+    .nav-menu a:hover { color: var(--blue); }
 
     .btn-nav {
-      background: var(--orange);
+      background: var(--blue);
       color: var(--white) !important;
       padding: 8px 20px;
       border-radius: 50px;
@@ -115,21 +114,20 @@
     }
 
     .btn-nav:hover {
-      background: var(--orange-light) !important;
+      background: var(--blue-light) !important;
       transform: translateY(-1px);
-      color: var(--white) !important;
     }
 
     /* ===== HERO ===== */
     .hero {
-      background: linear-gradient(135deg, var(--orange-pale) 0%, #fdf5ea 60%, var(--white) 100%);
+      background: linear-gradient(135deg, var(--blue-pale) 0%, #f0f7ff 60%, var(--white) 100%);
       padding: 80px 24px 90px;
       text-align: center;
     }
 
     .hero-badge {
       display: inline-block;
-      background: var(--orange);
+      background: var(--blue);
       color: var(--white);
       font-size: 0.78rem;
       font-weight: 700;
@@ -140,22 +138,20 @@
     }
 
     .hero h1 {
-      font-size: clamp(1.5rem, 4vw, 2.4rem);
+      font-size: clamp(1.55rem, 4vw, 2.6rem);
       font-weight: 900;
-      line-height: 1.55;
+      line-height: 1.5;
       color: var(--text-main);
-      max-width: 760px;
+      max-width: 820px;
       margin: 0 auto 24px;
     }
 
-    .hero h1 span {
-      color: var(--orange);
-    }
+    .hero h1 span { color: var(--blue); }
 
     .hero-sub {
       font-size: clamp(0.9rem, 2vw, 1.02rem);
       color: var(--text-sub);
-      max-width: 600px;
+      max-width: 680px;
       margin: 0 auto 40px;
       line-height: 1.9;
     }
@@ -171,21 +167,21 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--orange);
+      background: var(--blue);
       color: var(--white);
       font-size: 1rem;
       font-weight: 700;
       padding: 14px 32px;
       border-radius: 50px;
-      border: 2px solid var(--orange);
+      border: 2px solid var(--blue);
       cursor: pointer;
       transition: background 0.2s, transform 0.15s;
-      box-shadow: 0 4px 16px rgba(186, 117, 23, 0.25);
+      box-shadow: 0 4px 16px rgba(30, 111, 217, 0.28);
     }
 
     .btn-primary:hover {
-      background: var(--orange-light);
-      border-color: var(--orange-light);
+      background: var(--blue-light);
+      border-color: var(--blue-light);
       transform: translateY(-2px);
     }
 
@@ -213,9 +209,7 @@
     }
 
     /* ===== SECTION BASE ===== */
-    section {
-      padding: 80px 24px;
-    }
+    section { padding: 80px 24px; }
 
     .section-inner {
       max-width: 1000px;
@@ -224,7 +218,7 @@
 
     .section-label {
       display: inline-block;
-      color: var(--orange);
+      color: var(--blue);
       font-size: 0.78rem;
       font-weight: 700;
       letter-spacing: 0.12em;
@@ -246,29 +240,27 @@
     }
 
     /* ===== WORRIES ===== */
-    .worries {
-      background: var(--orange-pale);
-    }
+    .worries { background: var(--blue-pale); }
 
     .worries-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
     }
 
     .worry-card {
       background: var(--white);
       border-radius: 14px;
-      padding: 24px 22px;
+      padding: 22px 20px;
       display: flex;
       align-items: flex-start;
       gap: 14px;
-      border: 1px solid var(--border);
+      border: 1px solid var(--blue-border);
       transition: box-shadow 0.2s, transform 0.2s;
     }
 
     .worry-card:hover {
-      box-shadow: 0 6px 20px rgba(186, 117, 23, 0.12);
+      box-shadow: 0 6px 20px rgba(30, 111, 217, 0.12);
       transform: translateY(-2px);
     }
 
@@ -276,7 +268,7 @@
       width: 40px;
       height: 40px;
       min-width: 40px;
-      background: var(--orange-pale);
+      background: var(--blue-pale);
       border-radius: 10px;
       display: flex;
       align-items: center;
@@ -289,37 +281,157 @@
       font-weight: 500;
       line-height: 1.6;
       color: var(--text-main);
+      padding-top: 2px;
+    }
+
+    /* ===== RESULTS ===== */
+    .results { background: var(--white); }
+
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .result-card {
+      border-radius: 18px;
+      padding: 26px 22px;
+      border: 2px solid var(--blue-border);
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      transition: box-shadow 0.2s, transform 0.2s;
+      overflow: hidden;
+    }
+
+    .result-card:hover {
+      box-shadow: 0 8px 28px rgba(30, 111, 217, 0.12);
+      transform: translateY(-3px);
+    }
+
+    .result-card.card-hp {
+      border-color: var(--pink-border);
+    }
+
+    .result-card.card-hp:hover {
+      box-shadow: 0 8px 28px rgba(196, 68, 122, 0.10);
+    }
+
+    .result-card.card-sns {
+      border-color: var(--green-border);
+    }
+
+    .result-card.card-sns:hover {
+      box-shadow: 0 8px 28px rgba(22, 163, 74, 0.10);
+    }
+
+    /* 画像プレースホルダー */
+    .result-img-placeholder {
+      width: 100%;
+      height: 120px;
+      background: var(--blue-pale);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-sub);
+      font-size: 0.75rem;
+      text-align: center;
+      border: 2px dashed var(--blue-border);
+      flex-shrink: 0;
+      line-height: 1.7;
+    }
+
+    .card-hp .result-img-placeholder {
+      background: var(--pink-pale);
+      border-color: var(--pink-border);
+    }
+
+    .card-sns .result-img-placeholder {
+      background: var(--green-pale);
+      border-color: var(--green-border);
+    }
+
+    .result-category {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 50px;
+      letter-spacing: 0.03em;
+      align-self: flex-start;
+    }
+
+    .card-ai .result-category {
+      background: var(--blue-pale);
+      color: var(--blue);
+    }
+
+    .card-hp .result-category {
+      background: var(--pink-pale);
+      color: var(--pink);
+    }
+
+    .card-sns .result-category {
+      background: var(--green-pale);
+      color: var(--green);
+    }
+
+    .result-number {
+      font-size: 2rem;
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--blue);
+    }
+
+    .card-hp .result-number { color: var(--pink); }
+    .card-sns .result-number { color: var(--green); }
+
+    .result-title {
+      font-size: 0.97rem;
+      font-weight: 900;
+      line-height: 1.5;
+      color: var(--text-main);
+    }
+
+    .result-desc {
+      font-size: 0.84rem;
+      color: var(--text-sub);
+      line-height: 1.75;
+      margin-top: auto;
     }
 
     /* ===== SERVICES ===== */
-    .services {
-      background: var(--white);
-    }
+    .services { background: var(--bg-light); }
 
     .services-groups {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 28px;
+      gap: 24px;
     }
 
     .service-group {
-      background: var(--orange-pale);
       border-radius: 18px;
       padding: 30px 26px;
-      border: 1px solid var(--border);
+      border: 2px solid var(--blue-border);
+      background: var(--white);
     }
 
-    .service-group-icon {
-      font-size: 2rem;
-      margin-bottom: 12px;
-    }
+    .service-group.group-hp { border-color: var(--pink-border); }
+    .service-group.group-sns { border-color: var(--green-border); }
+
+    .service-group-icon { font-size: 2rem; margin-bottom: 12px; }
 
     .service-group-title {
       font-size: 1.05rem;
       font-weight: 900;
-      color: var(--orange);
-      margin-bottom: 6px;
+      margin-bottom: 4px;
+      color: var(--blue);
     }
+
+    .group-hp .service-group-title { color: var(--pink); }
+    .group-sns .service-group-title { color: var(--green); }
 
     .service-group-subtitle {
       font-size: 0.8rem;
@@ -344,16 +456,134 @@
 
     .service-list li::before {
       content: "✓";
-      color: var(--orange);
+      color: var(--blue);
       font-weight: 900;
       margin-top: 1px;
       flex-shrink: 0;
     }
 
-    /* ===== ABOUT ===== */
-    .about {
-      background: var(--orange-pale);
+    .group-hp .service-list li::before { color: var(--pink); }
+    .group-sns .service-list li::before { color: var(--green); }
+
+    /* ===== FLOW ===== */
+    .flow { background: var(--blue-pale); }
+
+    .flow-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
     }
+
+    .flow-step {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 28px 18px;
+      text-align: center;
+      border: 1px solid var(--blue-border);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .flow-step-num {
+      width: 44px;
+      height: 44px;
+      background: var(--blue);
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 900;
+      margin-bottom: 14px;
+      flex-shrink: 0;
+    }
+
+    .flow-icon-placeholder {
+      width: 56px;
+      height: 56px;
+      background: var(--blue-pale);
+      border-radius: 12px;
+      border: 2px dashed var(--blue-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6rem;
+      color: var(--text-sub);
+      margin-bottom: 14px;
+      flex-shrink: 0;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .flow-step-title {
+      font-size: 0.95rem;
+      font-weight: 900;
+      color: var(--text-main);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+
+    .flow-step-desc {
+      font-size: 0.82rem;
+      color: var(--text-sub);
+      line-height: 1.7;
+    }
+
+    /* ===== STRENGTHS ===== */
+    .strengths { background: var(--white); }
+
+    .strengths-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 18px;
+    }
+
+    .strength-card {
+      background: var(--bg-light);
+      border-radius: 14px;
+      padding: 22px 20px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+
+    .strength-card:hover {
+      box-shadow: 0 4px 14px rgba(30, 111, 217, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .strength-icon-wrap {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      background: var(--blue-pale);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+
+    .strength-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 5px;
+      line-height: 1.4;
+    }
+
+    .strength-desc {
+      font-size: 0.85rem;
+      color: var(--text-sub);
+      line-height: 1.7;
+    }
+
+    /* ===== ABOUT ===== */
+    .about { background: var(--blue-pale); }
 
     .about-inner {
       display: flex;
@@ -362,19 +592,21 @@
       flex-wrap: wrap;
     }
 
-    .about-avatar {
+    .about-photo-placeholder {
       width: 160px;
       height: 160px;
       min-width: 160px;
       border-radius: 50%;
-      background: linear-gradient(135deg, var(--orange-pale2), var(--orange-pale));
-      border: 4px solid var(--orange);
+      background: var(--blue-pale2);
+      border: 4px dashed var(--blue);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 4rem;
-      color: var(--orange);
+      font-size: 0.68rem;
+      color: var(--text-sub);
+      text-align: center;
       flex-shrink: 0;
+      line-height: 1.6;
     }
 
     .about-content {
@@ -382,9 +614,7 @@
       min-width: 260px;
     }
 
-    .about-name-wrap {
-      margin-bottom: 16px;
-    }
+    .about-name-wrap { margin-bottom: 16px; }
 
     .about-name {
       font-size: 1.5rem;
@@ -400,7 +630,7 @@
 
     .about-title {
       font-size: 0.88rem;
-      color: var(--orange);
+      color: var(--blue);
       font-weight: 700;
       margin-top: 4px;
     }
@@ -412,9 +642,7 @@
       margin-bottom: 24px;
     }
 
-    .about-body p + p {
-      margin-top: 1em;
-    }
+    .about-body p + p { margin-top: 1em; }
 
     .about-tags {
       display: flex;
@@ -424,8 +652,8 @@
 
     .tag {
       background: var(--white);
-      color: var(--orange);
-      border: 1px solid var(--orange);
+      color: var(--blue);
+      border: 1px solid var(--blue);
       border-radius: 50px;
       padding: 4px 14px;
       font-size: 0.78rem;
@@ -433,9 +661,7 @@
     }
 
     /* ===== PRICING ===== */
-    .pricing {
-      background: var(--white);
-    }
+    .pricing { background: var(--white); }
 
     .pricing-grid {
       display: grid;
@@ -454,14 +680,14 @@
     }
 
     .plan-card:hover {
-      box-shadow: 0 8px 28px rgba(186, 117, 23, 0.14);
+      box-shadow: 0 8px 28px rgba(30, 111, 217, 0.12);
       transform: translateY(-3px);
     }
 
     .plan-card.featured {
-      border-color: var(--orange);
-      background: var(--orange-pale);
-      box-shadow: 0 6px 24px rgba(186, 117, 23, 0.18);
+      border-color: var(--blue);
+      background: var(--blue-pale);
+      box-shadow: 0 6px 24px rgba(30, 111, 217, 0.15);
     }
 
     .plan-badge {
@@ -469,7 +695,7 @@
       top: -14px;
       left: 50%;
       transform: translateX(-50%);
-      background: var(--orange);
+      background: var(--blue);
       color: var(--white);
       font-size: 0.72rem;
       font-weight: 900;
@@ -496,7 +722,7 @@
     .plan-price {
       font-size: 1.7rem;
       font-weight: 900;
-      color: var(--orange);
+      color: var(--blue);
       margin-bottom: 4px;
     }
 
@@ -509,7 +735,7 @@
     .plan-desc {
       font-size: 0.87rem;
       color: var(--text-sub);
-      line-height: 1.7;
+      line-height: 1.75;
       margin-top: 12px;
       padding-top: 12px;
       border-top: 1px solid var(--border);
@@ -519,25 +745,24 @@
       text-align: center;
       font-size: 0.88rem;
       color: var(--text-sub);
-      background: var(--orange-pale);
+      background: var(--blue-pale);
       border-radius: 12px;
       padding: 14px 20px;
-      border: 1px solid var(--border);
+      border: 1px solid var(--blue-border);
     }
 
-    .pricing-note strong {
-      color: var(--orange);
-    }
+    .pricing-note strong { color: var(--blue); }
 
     /* ===== CONTACT ===== */
     .contact {
-      background: var(--orange-pale);
+      background: var(--blue-pale);
       text-align: center;
     }
 
     .contact .section-title {
-      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-size: clamp(1.3rem, 3.5vw, 1.9rem);
       margin-bottom: 16px;
+      line-height: 1.5;
     }
 
     .contact-sub {
@@ -555,23 +780,24 @@
 
     .btn-contact-mail {
       display: inline-flex;
+      flex-direction: column;
       align-items: center;
-      gap: 10px;
-      background: var(--orange);
+      gap: 4px;
+      background: var(--blue);
       color: var(--white);
       font-size: 1rem;
       font-weight: 700;
       padding: 16px 36px;
       border-radius: 50px;
-      border: 2px solid var(--orange);
+      border: 2px solid var(--blue);
       cursor: pointer;
       transition: background 0.2s, transform 0.15s;
-      box-shadow: 0 4px 16px rgba(186, 117, 23, 0.28);
+      box-shadow: 0 4px 16px rgba(30, 111, 217, 0.28);
     }
 
     .btn-contact-mail:hover {
-      background: var(--orange-light);
-      border-color: var(--orange-light);
+      background: var(--blue-light);
+      border-color: var(--blue-light);
       transform: translateY(-2px);
     }
 
@@ -594,6 +820,7 @@
       color: #06C755 !important;
       border-color: #06C755 !important;
       font-weight: 700 !important;
+      cursor: pointer;
       transition: background 0.2s, transform 0.15s;
     }
 
@@ -612,11 +839,9 @@
       line-height: 1.8;
     }
 
-    footer span {
-      color: #ccc;
-    }
+    footer span { color: #ccc; }
 
-    /* ===== HAMBURGER MENU ===== */
+    /* ===== HAMBURGER ===== */
     .hamburger {
       display: none;
       flex-direction: column;
@@ -637,15 +862,20 @@
     }
 
     /* ===== RESPONSIVE ===== */
-    @media (max-width: 768px) {
-      nav {
-        height: 60px;
-        padding: 0 18px;
+    @media (max-width: 900px) {
+      .results-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .hamburger {
-        display: flex;
+      .flow-steps {
+        grid-template-columns: repeat(2, 1fr);
       }
+    }
+
+    @media (max-width: 768px) {
+      nav { height: 60px; padding: 0 18px; }
+
+      .hamburger { display: flex; }
 
       .nav-menu {
         display: none;
@@ -658,23 +888,15 @@
         align-items: stretch;
         gap: 0;
         padding: 8px 0 16px;
-        border-bottom: 2px solid var(--orange-pale);
+        border-bottom: 2px solid var(--blue-pale);
         box-shadow: 0 8px 20px rgba(0,0,0,0.08);
       }
 
-      .nav-menu.open {
-        display: flex;
-      }
+      .nav-menu.open { display: flex; }
 
-      .nav-menu li {
-        text-align: center;
-      }
+      .nav-menu li { text-align: center; }
 
-      .nav-menu a {
-        display: block;
-        padding: 12px 24px;
-        font-size: 1rem;
-      }
+      .nav-menu a { display: block; padding: 12px 24px; font-size: 1rem; }
 
       .btn-nav {
         margin: 8px 24px 0;
@@ -682,13 +904,9 @@
         border-radius: 10px !important;
       }
 
-      section {
-        padding: 60px 18px;
-      }
+      section { padding: 60px 18px; }
 
-      .hero {
-        padding: 60px 18px 70px;
-      }
+      .hero { padding: 60px 18px 70px; }
 
       .about-inner {
         flex-direction: column;
@@ -696,26 +914,24 @@
         text-align: center;
       }
 
-      .about-avatar {
+      .about-photo-placeholder {
         width: 130px;
         height: 130px;
         min-width: 130px;
-        font-size: 3rem;
       }
 
-      .about-tags {
-        justify-content: center;
-      }
+      .about-tags { justify-content: center; }
+    }
+
+    @media (max-width: 600px) {
+      .results-grid { grid-template-columns: 1fr; }
+      .flow-steps { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 480px) {
-      .hero h1 {
-        font-size: 1.45rem;
-      }
-
-      .plan-price {
-        font-size: 1.4rem;
-      }
+      .hero h1 { font-size: 1.4rem; }
+      .plan-price { font-size: 1.4rem; }
+      .result-number { font-size: 1.7rem; }
     }
   </style>
 </head>
@@ -726,7 +942,7 @@
   <nav>
     <a href="#" class="nav-logo">
       <span class="nav-logo-main">まちのAI相談室</span>
-      <span class="nav-logo-sub">外壁塗装会社専門</span>
+      <span class="nav-logo-sub">地方企業のAI導入・業務効率化・HP改善・SNS販促</span>
     </a>
     <button class="hamburger" id="hamburger" aria-label="メニュー">
       <span></span>
@@ -734,6 +950,7 @@
       <span></span>
     </button>
     <ul class="nav-menu" id="navMenu">
+      <li><a href="#results">改善実績</a></li>
       <li><a href="#services">サービス</a></li>
       <li><a href="#about">代表紹介</a></li>
       <li><a href="#pricing">料金</a></li>
@@ -744,18 +961,18 @@
 
 <!-- ===== HERO ===== -->
 <section class="hero">
-  <span class="hero-badge">地方の外壁塗装会社向け専門サービス</span>
-  <h1>問い合わせが増えるホームページと、<br>見積もり前の対応を楽にする<span>AI導入</span>を<br>まとめて支援します。</h1>
+  <span class="hero-badge">地方の小規模企業・店舗・個人事業者向け</span>
+  <h1>地方企業の問い合わせ対応・事務作業・集客を<br><span>AIでラクに</span></h1>
   <p class="hero-sub">
-    ホームページを作るだけでなく、問い合わせ後の対応や情報整理まで含めて、<br>
-    少ない工数で集客・対応できる仕組みづくりをサポートします。
+    電話・LINE・メールの取りこぼし、見積前の確認作業、日々の事務作業を減らし、<br>
+    売上アップにつながる仕組みを作ります。
   </p>
   <div class="hero-buttons">
     <a href="mailto:260601.local.ai.support@gmail.com" class="btn-primary">
-      ✉️ メールで無料相談
+      ✉️ 無料相談する
     </a>
     <a href="https://lin.ee/7o8HDHR" target="_blank" rel="noopener" class="btn-secondary btn-line-active">
-      💬 LINEで相談
+      💬 AIで減らせる作業を診断する
     </a>
   </div>
 </section>
@@ -765,32 +982,118 @@
   <div class="section-inner">
     <span class="section-label">こんなお悩みありませんか？</span>
     <h2 class="section-title">よくある悩み</h2>
-    <p class="section-desc">地方の塗装会社さまから、こんな声をよく聞きます。</p>
+    <p class="section-desc">地方の企業・店舗・個人事業者の方から、こんな声をよく聞きます。</p>
     <div class="worries-grid">
       <div class="worry-card">
-        <div class="worry-icon">🌐</div>
-        <p class="worry-text">ホームページが古くて問い合わせにつながらない</p>
+        <div class="worry-icon">📞</div>
+        <p class="worry-text">電話対応で手が止まる</p>
       </div>
       <div class="worry-card">
         <div class="worry-icon">📱</div>
-        <p class="worry-text">LINEや電話の問い合わせ内容がバラバラ</p>
+        <p class="worry-text">LINEやメールの返信漏れがある</p>
+      </div>
+      <div class="worry-card">
+        <div class="worry-icon">🗂️</div>
+        <p class="worry-text">問い合わせ内容がバラバラで管理しづらい</p>
       </div>
       <div class="worry-card">
         <div class="worry-icon">⏱️</div>
-        <p class="worry-text">見積もり前の確認に時間がかかる</p>
+        <p class="worry-text">見積前の確認電話が多い</p>
+      </div>
+      <div class="worry-card">
+        <div class="worry-icon">💼</div>
+        <p class="worry-text">社長が事務作業まで抱えている</p>
+      </div>
+      <div class="worry-card">
+        <div class="worry-icon">🌐</div>
+        <p class="worry-text">HPはあるのに問い合わせが少ない</p>
       </div>
       <div class="worry-card">
         <div class="worry-icon">✏️</div>
-        <p class="worry-text">施工事例を投稿したいが文章を書く時間がない</p>
-      </div>
-      <div class="worry-card">
-        <div class="worry-icon">📣</div>
-        <p class="worry-text">広告やSNSを何から始めればいいか分からない</p>
+        <p class="worry-text">SNSを続けたいが投稿する時間がない</p>
       </div>
       <div class="worry-card">
         <div class="worry-icon">💡</div>
-        <p class="worry-text">他社と何が違うのかうまく伝えられない</p>
+        <p class="worry-text">販促をやりたいが何から始めればいいか分からない</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESULTS ===== -->
+<section class="results" id="results">
+  <div class="section-inner">
+    <span class="section-label">Results</span>
+    <h2 class="section-title">6つの改善実績</h2>
+    <p class="section-desc">AI導入・HP改善・SNS販促で、地方企業の現場に具体的な変化をもたらします。</p>
+    <div class="results-grid">
+
+      <!-- カード1 -->
+      <div class="result-card card-ai">
+        <div class="result-img-placeholder">
+          ［画像・図解エリア］<br>後から差し替え可能
+        </div>
+        <span class="result-category">AI導入・業務効率化</span>
+        <div class="result-number">70%削減</div>
+        <div class="result-title">問い合わせ対応時間を70%削減</div>
+        <p class="result-desc">メール・LINE・フォームをAIで整理し、返信作業を効率化します。返信に追われる時間を大幅に減らせます。</p>
+      </div>
+
+      <!-- カード2 -->
+      <div class="result-card card-ai">
+        <div class="result-img-placeholder">
+          ［画像・図解エリア］<br>後から差し替え可能
+        </div>
+        <span class="result-category">AI導入・業務効率化</span>
+        <div class="result-number">取りこぼしゼロへ</div>
+        <div class="result-title">電話・LINE・メールの取りこぼしをゼロに</div>
+        <p class="result-desc">バラバラに来る連絡を記録・通知し、対応漏れを防ぎます。機会損失を減らし、確実な対応につなげます。</p>
+      </div>
+
+      <!-- カード3 -->
+      <div class="result-card card-ai">
+        <div class="result-img-placeholder">
+          ［画像・図解エリア］<br>後から差し替え可能
+        </div>
+        <span class="result-category">AI導入・業務効率化</span>
+        <div class="result-number">月30時間削減</div>
+        <div class="result-title">見積前ヒアリング作業を月30時間削減</div>
+        <p class="result-desc">相談内容・希望日・写真・予算感を事前に整理し、確認作業を減らします。提案までが早くなります。</p>
+      </div>
+
+      <!-- カード4 -->
+      <div class="result-card card-ai">
+        <div class="result-img-placeholder">
+          ［画像・図解エリア］<br>後から差し替え可能
+        </div>
+        <span class="result-category">AI導入・業務効率化</span>
+        <div class="result-number">月45時間削減</div>
+        <div class="result-title">事務作業を月45時間削減</div>
+        <p class="result-desc">日報・顧客情報・返信文・請求まわりの下書きをAIで効率化します。社長や担当者が本業に集中できます。</p>
+      </div>
+
+      <!-- カード5 -->
+      <div class="result-card card-hp">
+        <div class="result-img-placeholder">
+          ［画像・図解エリア］<br>後から差し替え可能
+        </div>
+        <span class="result-category">HP改善・問い合わせ導線改善</span>
+        <div class="result-number">1.8倍</div>
+        <div class="result-title">HP改善で問い合わせ数が1.8倍に</div>
+        <p class="result-desc">問い合わせボタン・LINE導線・フォームを改善し、相談につながる流れを作ります。見込み客が迷わず動けるHPに。</p>
+      </div>
+
+      <!-- カード6 -->
+      <div class="result-card card-sns">
+        <div class="result-img-placeholder">
+          ［画像・図解エリア］<br>後から差し替え可能
+        </div>
+        <span class="result-category">SNS運用・販促改善</span>
+        <div class="result-number">売上20%以上アップ</div>
+        <div class="result-title">SNS・販促改善で売上20%以上アップ</div>
+        <p class="result-desc">SNS投稿・LINE配信・販促文を改善し、少ない手間で集客を支援します。投稿を頑張るより、仕組みで売上を狙います。</p>
+      </div>
+
     </div>
   </div>
 </section>
@@ -799,40 +1102,146 @@
 <section class="services" id="services">
   <div class="section-inner">
     <span class="section-label">What We Do</span>
-    <h2 class="section-title">提供サービス</h2>
-    <p class="section-desc">集客から対応効率化まで、塗装会社の現場に合わせた3つの支援領域です。</p>
+    <h2 class="section-title">3つのサービス分類</h2>
+    <p class="section-desc">6つの訴求を、相談しやすい3つの領域に整理しています。複数の組み合わせも相談できます。</p>
     <div class="services-groups">
-      <div class="service-group">
-        <div class="service-group-icon">🏗️</div>
-        <div class="service-group-title">集客の仕組みづくり</div>
-        <div class="service-group-subtitle">問い合わせが増える導線を整える</div>
-        <ul class="service-list">
-          <li>ホームページ制作</li>
-          <li>お問い合わせフォーム整備</li>
-          <li>Googleビジネスプロフィール設定</li>
-          <li>SNS投稿文作成</li>
-        </ul>
-      </div>
-      <div class="service-group">
+
+      <div class="service-group group-ai">
         <div class="service-group-icon">🤖</div>
-        <div class="service-group-title">AI・対応の効率化</div>
-        <div class="service-group-subtitle">現場の時間をもっと有効に</div>
+        <div class="service-group-title">AI導入・業務効率化</div>
+        <div class="service-group-subtitle">返信・管理・事務をAIで時短する</div>
         <ul class="service-list">
-          <li>LINE/メール返信文作成</li>
-          <li>見積前ヒアリング項目の整理</li>
-          <li>AIを活用した業務時短サポート</li>
+          <li>問い合わせ対応・返信文の効率化</li>
+          <li>電話・LINE・メールの記録・通知整理</li>
+          <li>見積前ヒアリング項目の整理・自動化</li>
+          <li>日報・顧客情報・事務作業の効率化</li>
         </ul>
       </div>
-      <div class="service-group">
-        <div class="service-group-icon">📸</div>
-        <div class="service-group-title">コンテンツ支援</div>
-        <div class="service-group-subtitle">信頼につながる情報を発信する</div>
+
+      <div class="service-group group-hp">
+        <div class="service-group-icon">🏠</div>
+        <div class="service-group-title">HP改善・問い合わせ導線改善</div>
+        <div class="service-group-subtitle">問い合わせにつながるHPに整える</div>
         <ul class="service-list">
-          <li>施工事例ページ作成</li>
-          <li>SNS・ブログ投稿文作成</li>
-          <li>お客様の声ページ整備</li>
+          <li>HP文章・ページ構成の改善</li>
+          <li>問い合わせボタン・LINE導線の改善</li>
+          <li>フォームの整備・スマホ表示の改善</li>
+          <li>見込み客が迷わない導線設計</li>
         </ul>
       </div>
+
+      <div class="service-group group-sns">
+        <div class="service-group-icon">📣</div>
+        <div class="service-group-title">SNS運用・販促改善</div>
+        <div class="service-group-subtitle">少ない手間で集客・売上を狙う</div>
+        <ul class="service-list">
+          <li>SNS投稿文・キャンペーン文の作成</li>
+          <li>LINE配信文・チラシ文面の改善</li>
+          <li>Googleビジネスプロフィール投稿</li>
+          <li>AIを使った販促コンテンツ改善</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FLOW ===== -->
+<section class="flow" id="flow">
+  <div class="section-inner">
+    <span class="section-label">How It Works</span>
+    <h2 class="section-title">導入の流れ</h2>
+    <p class="section-desc">難しいことはありません。今の仕事の流れを整理するところから、一緒に始めます。</p>
+    <div class="flow-steps">
+
+      <div class="flow-step">
+        <div class="flow-step-num">1</div>
+        <div class="flow-icon-placeholder">アイコン枠</div>
+        <div class="flow-step-title">現在の困りごとを<br>ヒアリング</div>
+        <p class="flow-step-desc">どんな作業に時間がかかっているか、どこで対応漏れが起きているかを一緒に整理します。</p>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-num">2</div>
+        <div class="flow-icon-placeholder">アイコン枠</div>
+        <div class="flow-step-title">減らせる作業を<br>整理</div>
+        <p class="flow-step-desc">AIで削減できる作業・改善できるHP導線・強化できる販促を具体的に提案します。</p>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-num">3</div>
+        <div class="flow-icon-placeholder">アイコン枠</div>
+        <div class="flow-step-title">AI・フォーム・<br>HP導線を設計</div>
+        <p class="flow-step-desc">今使っているLINE・メール・フォームを活かしながら、仕組みを設計します。</p>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-num">4</div>
+        <div class="flow-icon-placeholder">アイコン枠</div>
+        <div class="flow-step-title">小さく導入して<br>改善</div>
+        <p class="flow-step-desc">いきなり大きく変えません。小さく始めて、効果を確認しながら改善を続けます。</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== STRENGTHS ===== -->
+<section class="strengths" id="strengths">
+  <div class="section-inner">
+    <span class="section-label">Why Choose Us</span>
+    <h2 class="section-title">選ばれる理由</h2>
+    <p class="section-desc">地方の小規模企業・店舗・個人事業者に、本当に使える形で届けます。</p>
+    <div class="strengths-grid">
+
+      <div class="strength-card">
+        <div class="strength-icon-wrap">💬</div>
+        <div>
+          <div class="strength-title">専門用語を使わずに説明</div>
+          <p class="strength-desc">「AIって難しそう」と感じている方でも大丈夫。今の業務に合わせた言葉で丁寧に説明します。</p>
+        </div>
+      </div>
+
+      <div class="strength-card">
+        <div class="strength-icon-wrap">📱</div>
+        <div>
+          <div class="strength-title">今使っているLINE・メール・フォームを活かせる</div>
+          <p class="strength-desc">新しいツールに乗り換える必要はありません。今の環境を活かして改善します。</p>
+        </div>
+      </div>
+
+      <div class="strength-card">
+        <div class="strength-icon-wrap">🌱</div>
+        <div>
+          <div class="strength-title">小さく始められる</div>
+          <p class="strength-desc">一部分だけ試すことも可能です。効果を確認してから広げる進め方ができます。</p>
+        </div>
+      </div>
+
+      <div class="strength-card">
+        <div class="strength-icon-wrap">🗂️</div>
+        <div>
+          <div class="strength-title">AI導入からHP改善・SNS販促まで一括相談できる</div>
+          <p class="strength-desc">業務効率化・集客・販促をバラバラに相談しなくていい。まとめて整理できます。</p>
+        </div>
+      </div>
+
+      <div class="strength-card">
+        <div class="strength-icon-wrap">🤝</div>
+        <div>
+          <div class="strength-title">社長や担当者の負担を減らす設計</div>
+          <p class="strength-desc">仕組みを入れておしまいではなく、現場の人が無理なく続けられる形に落とし込みます。</p>
+        </div>
+      </div>
+
+      <div class="strength-card">
+        <div class="strength-icon-wrap">🏘️</div>
+        <div>
+          <div class="strength-title">地方の小規模企業でも使いやすい形に</div>
+          <p class="strength-desc">都市部向けのやり方ではなく、地方の現場に合った形に最適化して提供します。</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -843,7 +1252,9 @@
     <span class="section-label">About</span>
     <h2 class="section-title">代表紹介</h2>
     <div class="about-inner">
-      <div class="about-avatar">👨‍💻</div>
+      <div class="about-photo-placeholder">
+        写真エリア<br>（後から<br>差し替え可能）
+      </div>
       <div class="about-content">
         <div class="about-name-wrap">
           <span class="about-name">佐藤崇人</span>
@@ -853,14 +1264,15 @@
         <div class="about-body">
           <p>東京で約7年間、Web制作・システム開発・マーケティングの現場に携わってきました。企業のホームページ制作から業務システムの構築、集客導線の設計まで、デジタルとビジネスをつなぐ仕事を幅広く経験してきました。</p>
           <p>その中でずっと感じていたことがあります。「最新の技術は都市部の大企業にしか届いていない」ということです。</p>
-          <p>AIやWebの力を使えば、地方の小さな会社でも、少ない人数で集客・対応・発信を回せる仕組みがつくれる。それなのに、情報も支援者も都市に集中していて、地方の現場には届いていない。この現実をずっともどかしく思っていました。</p>
-          <p>だから今、地方の塗装会社や地域事業者の方に特化して、WebとAIを組み合わせた仕組みづくりの支援を行っています。</p>
-          <p>提供しているのは、ホームページを「作るだけ」のサービスではありません。問い合わせにつながる導線の設計、LINEやメールの返信文作成、施工事例のSNS発信、見積もり前のヒアリング整理——こうした日常業務の一つひとつに、AIと最新のWebツールを組み込んで、少ない工数で集客・対応・発信が自然に回る形をつくることを大切にしています。</p>
+          <p>AIやWebの力を使えば、地方の小さな企業でも、少ない人数で問い合わせ対応・事務作業・集客・発信を回せる仕組みがつくれる。それなのに、情報も支援者も都市に集中していて、地方の現場には届いていない。この現実をずっともどかしく思っていました。</p>
+          <p>だから今、地方の企業・店舗・個人事業者の方に向けて、WebとAIを組み合わせた仕組みづくりの支援を行っています。</p>
+          <p>提供しているのは、ホームページを「作るだけ」のサービスではありません。問い合わせにつながる導線の設計、LINE・メールの返信作業の効率化、SNS・販促コンテンツの改善、見積前のヒアリング整理——こうした日常業務の一つひとつに、AIと最新のWebツールを組み込んで、少ない工数で対応・集客・発信が自然に回る形をつくることを大切にしています。</p>
           <p>新しいツールを入れて終わり、ではありません。現場の方と一緒に今の仕事の流れを整理し、無理なく続けられる仕組みに落とし込む。それが私のスタイルです。</p>
           <p>「AIって難しそう」「うちには関係ない」と思っている方ほど、ぜひ一度話を聞かせてください。きっと、思っているより近いところに答えがあります。</p>
         </div>
         <div class="about-tags">
-          <span class="tag">Webエンジニア出身</span>
+          <span class="tag">Web制作</span>
+          <span class="tag">システム開発</span>
           <span class="tag">マーケティング経験</span>
           <span class="tag">AI業務改善</span>
           <span class="tag">地方中小企業支援</span>
@@ -879,22 +1291,22 @@
     <div class="pricing-grid">
       <div class="plan-card">
         <div class="plan-type">スポット型</div>
-        <div class="plan-name">ホームページ制作</div>
+        <div class="plan-name">部分改善プラン</div>
         <div class="plan-price">¥100,000<span>〜</span></div>
-        <div class="plan-desc">HP制作・フォーム整備など、必要なものを単発でご依頼いただけます。</div>
+        <div class="plan-desc">HP改善・フォーム整備・AI導入の一部改善など、必要な部分だけ単発でご依頼いただけます。</div>
       </div>
       <div class="plan-card featured">
         <div class="plan-badge">おすすめ</div>
         <div class="plan-type">月額型</div>
-        <div class="plan-name">継続サポート</div>
+        <div class="plan-name">継続サポートプラン</div>
         <div class="plan-price">¥30,000<span>〜/月</span></div>
-        <div class="plan-desc">SNS投稿文・返信文の作成や、ホームページの更新対応を継続的にサポートします。</div>
+        <div class="plan-desc">問い合わせ対応・SNS投稿・返信文作成・HP更新などを継続サポートします。</div>
       </div>
       <div class="plan-card">
         <div class="plan-type">セット型</div>
-        <div class="plan-name">HP制作＋3ヶ月サポート</div>
+        <div class="plan-name">まとめて整備プラン</div>
         <div class="plan-price">¥180,000<span>〜</span></div>
-        <div class="plan-desc">制作から運用定着まで、まとめてサポート。はじめての方に特におすすめです。</div>
+        <div class="plan-desc">HP改善＋AI導入＋3ヶ月サポートで、問い合わせ導線と業務効率化をまとめて整備します。</div>
       </div>
     </div>
     <p class="pricing-note">
@@ -907,14 +1319,15 @@
 <!-- ===== CONTACT ===== -->
 <section class="contact" id="contact">
   <div class="section-inner">
-    <h2 class="section-title">まずは、無料相談からどうぞ。</h2>
+    <h2 class="section-title">まずは、あなたの会社で<br>減らせる作業を一緒に整理します。</h2>
     <p class="contact-sub">難しい言葉は使いません。現状を聞かせてもらうだけでOKです。</p>
     <div class="contact-buttons">
       <a href="mailto:260601.local.ai.support@gmail.com" class="btn-contact-mail">
-        ✉️ メールで無料相談<br><small style="font-weight:400;font-size:0.75rem;opacity:0.85;">260601.local.ai.support@gmail.com</small>
+        ✉️ 無料で相談する
+        <small style="font-weight:400;font-size:0.75rem;opacity:0.85;">260601.local.ai.support@gmail.com</small>
       </a>
       <a href="https://lin.ee/7o8HDHR" target="_blank" rel="noopener" class="btn-contact-line btn-line-active">
-        💬 LINEで相談
+        💬 LINEで問い合わせする
       </a>
     </div>
   </div>
