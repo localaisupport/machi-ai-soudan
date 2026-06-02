@@ -535,21 +535,13 @@
       flex-shrink: 0;
     }
 
-    .flow-icon-placeholder {
-      width: 56px;
-      height: 56px;
-      background: var(--blue-pale);
-      border-radius: 12px;
-      border: 2px dashed var(--blue-border);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.6rem;
-      color: var(--text-sub);
-      margin-bottom: 14px;
+    .flow-step img {
+      width: 88px;
+      height: 88px;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto 14px;
       flex-shrink: 0;
-      text-align: center;
-      line-height: 1.5;
     }
 
     .flow-step-title {
@@ -621,32 +613,11 @@
     .about { background: var(--blue-pale); }
 
     .about-inner {
-      display: flex;
-      gap: 48px;
-      align-items: flex-start;
-      flex-wrap: wrap;
-    }
-
-    .about-photo-placeholder {
-      width: 160px;
-      height: 160px;
-      min-width: 160px;
-      border-radius: 50%;
-      background: var(--blue-pale2);
-      border: 4px dashed var(--blue);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.68rem;
-      color: var(--text-sub);
-      text-align: center;
-      flex-shrink: 0;
-      line-height: 1.6;
+      max-width: 760px;
     }
 
     .about-content {
-      flex: 1;
-      min-width: 260px;
+      width: 100%;
     }
 
     .about-name-wrap { margin-bottom: 16px; }
@@ -943,16 +914,10 @@
 
       .hero { padding: 60px 18px 70px; }
 
-      .about-inner {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-
-      .about-photo-placeholder {
-        width: 130px;
-        height: 130px;
-        min-width: 130px;
+      .flow-step img {
+        width: 64px;
+        height: 64px;
+        margin-bottom: 12px;
       }
 
       .about-tags { justify-content: center; }
@@ -1184,28 +1149,28 @@
 
       <div class="flow-step">
         <div class="flow-step-num">1</div>
-        <div class="flow-icon-placeholder">アイコン枠</div>
+        <img src="assets/images/flow/flow_01_hearing.png" alt="現在の困りごとをヒアリングするアイコン" loading="lazy">
         <div class="flow-step-title">現在の困りごとを<br>ヒアリング</div>
         <p class="flow-step-desc">どんな作業に時間がかかっているか、どこで対応漏れが起きているかを一緒に整理します。</p>
       </div>
 
       <div class="flow-step">
         <div class="flow-step-num">2</div>
-        <div class="flow-icon-placeholder">アイコン枠</div>
+        <img src="assets/images/flow/flow_02_task_reduction.png" alt="減らせる作業を整理するチェックリストアイコン" loading="lazy">
         <div class="flow-step-title">減らせる作業を<br>整理</div>
         <p class="flow-step-desc">AIで削減できる作業・改善できるHP導線・強化できる販促を具体的に提案します。</p>
       </div>
 
       <div class="flow-step">
         <div class="flow-step-num">3</div>
-        <div class="flow-icon-placeholder">アイコン枠</div>
+        <img src="assets/images/flow/flow_03_ai_workflow.png" alt="AIとフォームとHP導線を設計するワークフローアイコン" loading="lazy">
         <div class="flow-step-title">AI・フォーム・<br>HP導線を設計</div>
         <p class="flow-step-desc">今使っているLINE・メール・フォームを活かしながら、仕組みを設計します。</p>
       </div>
 
       <div class="flow-step">
         <div class="flow-step-num">4</div>
-        <div class="flow-icon-placeholder">アイコン枠</div>
+        <img src="assets/images/flow/flow_04_improve.png" alt="小さく導入して改善する成長アイコン" loading="lazy">
         <div class="flow-step-title">小さく導入して<br>改善</div>
         <p class="flow-step-desc">いきなり大きく変えません。小さく始めて、効果を確認しながら改善を続けます。</p>
       </div>
@@ -1280,9 +1245,6 @@
     <span class="section-label">About</span>
     <h2 class="section-title">代表紹介</h2>
     <div class="about-inner">
-      <div class="about-photo-placeholder">
-        写真エリア<br>（後から<br>差し替え可能）
-      </div>
       <div class="about-content">
         <div class="about-name-wrap">
           <span class="about-name">佐藤崇人</span>
