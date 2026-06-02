@@ -326,16 +326,77 @@
       box-shadow: 0 8px 28px rgba(22, 163, 74, 0.10);
     }
 
-    /* カード画像 */
+    /* カード画像ボタン */
+    .img-zoom-btn {
+      display: block;
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: zoom-in;
+      border-radius: 10px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
     .result-card img {
       width: 100%;
       height: auto;
       display: block;
       border-radius: 10px;
-      margin-bottom: 4px;
       object-fit: cover;
-      flex-shrink: 0;
+      transition: transform 0.22s ease, box-shadow 0.22s ease;
     }
+
+    .img-zoom-btn:hover img {
+      transform: scale(1.03);
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.16);
+    }
+
+    /* ===== LIGHTBOX ===== */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9000;
+      background: rgba(0, 0, 0, 0.82);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .lightbox.open { display: flex; }
+
+    .lightbox-img {
+      max-width: 92vw;
+      max-height: 88vh;
+      border-radius: 12px;
+      box-shadow: 0 8px 48px rgba(0, 0, 0, 0.5);
+      object-fit: contain;
+      pointer-events: none;
+    }
+
+    .lightbox-close {
+      position: fixed;
+      top: 20px;
+      right: 24px;
+      background: rgba(255, 255, 255, 0.18);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      z-index: 9001;
+      line-height: 1;
+    }
+
+    .lightbox-close:hover { background: rgba(255, 255, 255, 0.32); }
 
     .result-category {
       display: inline-block;
@@ -361,16 +422,6 @@
       background: var(--green-pale);
       color: var(--green);
     }
-
-    .result-number {
-      font-size: 2rem;
-      font-weight: 900;
-      line-height: 1.1;
-      color: var(--blue);
-    }
-
-    .card-hp .result-number { color: var(--pink); }
-    .card-sns .result-number { color: var(--green); }
 
     .result-title {
       font-size: 0.97rem;
@@ -915,7 +966,6 @@
     @media (max-width: 480px) {
       .hero h1 { font-size: 1.4rem; }
       .plan-price { font-size: 1.4rem; }
-      .result-number { font-size: 1.7rem; }
     }
   </style>
 </head>
@@ -1014,56 +1064,62 @@
 
       <!-- カード1 -->
       <div class="result-card card-ai">
-        <img src="assets/images/results/01_inquiry_response_time_70.png" alt="問い合わせ対応時間を70%削減するAI導入イメージ" loading="lazy">
+        <button class="img-zoom-btn" data-src="assets/images/results/01_inquiry_response_time_70.png" aria-label="画像を拡大">
+          <img src="assets/images/results/01_inquiry_response_time_70.png" alt="問い合わせ対応時間を70%削減するAI導入イメージ" loading="lazy">
+        </button>
         <span class="result-category">AI導入・業務効率化</span>
-        <div class="result-number">70%削減</div>
-        <div class="result-title">問い合わせ対応時間を70%削減</div>
-        <p class="result-desc">メール・LINE・フォームをAIで整理し、返信作業を効率化します。返信に追われる時間を大幅に減らせます。</p>
+        <div class="result-title">返信作業をAIで整理</div>
+        <p class="result-desc">メール・LINE・フォームの問い合わせを整理し、返信文作成や対応確認の手間を減らします。</p>
       </div>
 
       <!-- カード2 -->
       <div class="result-card card-ai">
-        <img src="assets/images/results/02_no_missed_phone_line_mail.png" alt="電話・LINE・メールの取りこぼしをゼロにするAI対応イメージ" loading="lazy">
+        <button class="img-zoom-btn" data-src="assets/images/results/02_no_missed_phone_line_mail.png" aria-label="画像を拡大">
+          <img src="assets/images/results/02_no_missed_phone_line_mail.png" alt="電話・LINE・メールの取りこぼしをゼロにするAI対応イメージ" loading="lazy">
+        </button>
         <span class="result-category">AI導入・業務効率化</span>
-        <div class="result-number">取りこぼしゼロへ</div>
-        <div class="result-title">電話・LINE・メールの取りこぼしをゼロに</div>
-        <p class="result-desc">バラバラに来る連絡を記録・通知し、対応漏れを防ぎます。機会損失を減らし、確実な対応につなげます。</p>
+        <div class="result-title">連絡の対応漏れを防止</div>
+        <p class="result-desc">バラバラに届く連絡を記録・通知し、折り返し忘れや返信漏れを防ぎます。</p>
       </div>
 
       <!-- カード3 -->
       <div class="result-card card-ai">
-        <img src="assets/images/results/03_estimate_hearing_30h.png" alt="見積前ヒアリング作業を月30時間削減するAI整理イメージ" loading="lazy">
+        <button class="img-zoom-btn" data-src="assets/images/results/03_estimate_hearing_30h.png" aria-label="画像を拡大">
+          <img src="assets/images/results/03_estimate_hearing_30h.png" alt="見積前ヒアリング作業を月30時間削減するAI整理イメージ" loading="lazy">
+        </button>
         <span class="result-category">AI導入・業務効率化</span>
-        <div class="result-number">月30時間削減</div>
-        <div class="result-title">見積前ヒアリング作業を月30時間削減</div>
-        <p class="result-desc">相談内容・希望日・写真・予算感を事前に整理し、確認作業を減らします。提案までが早くなります。</p>
+        <div class="result-title">見積前の確認を効率化</div>
+        <p class="result-desc">相談内容・希望日・写真・予算感などを事前に整理し、確認電話や聞き直しを減らします。</p>
       </div>
 
       <!-- カード4 -->
       <div class="result-card card-ai">
-        <img src="assets/images/results/04_admin_work_45h.png" alt="事務作業を月45時間削減するAI業務効率化イメージ" loading="lazy">
+        <button class="img-zoom-btn" data-src="assets/images/results/04_admin_work_45h.png" aria-label="画像を拡大">
+          <img src="assets/images/results/04_admin_work_45h.png" alt="事務作業を月45時間削減するAI業務効率化イメージ" loading="lazy">
+        </button>
         <span class="result-category">AI導入・業務効率化</span>
-        <div class="result-number">月45時間削減</div>
-        <div class="result-title">事務作業を月45時間削減</div>
-        <p class="result-desc">日報・顧客情報・返信文・請求まわりの下書きをAIで効率化します。社長や担当者が本業に集中できます。</p>
+        <div class="result-title">日々の事務をAIで軽く</div>
+        <p class="result-desc">日報・顧客情報・返信文・請求まわりの下書きを効率化し、本業に使える時間を増やします。</p>
       </div>
 
       <!-- カード5 -->
       <div class="result-card card-hp">
-        <img src="assets/images/results/05_hp_inquiry_1_8x.png" alt="HP改善で問い合わせ数が1.8倍になる導線改善イメージ" loading="lazy">
+        <button class="img-zoom-btn" data-src="assets/images/results/05_hp_inquiry_1_8x.png" aria-label="画像を拡大">
+          <img src="assets/images/results/05_hp_inquiry_1_8x.png" alt="HP改善で問い合わせ数が1.8倍になる導線改善イメージ" loading="lazy">
+        </button>
         <span class="result-category">HP改善・問い合わせ導線改善</span>
-        <div class="result-number">1.8倍</div>
-        <div class="result-title">HP改善で問い合わせ数が1.8倍に</div>
-        <p class="result-desc">問い合わせボタン・LINE導線・フォームを改善し、相談につながる流れを作ります。見込み客が迷わず動けるHPに。</p>
+        <div class="result-title">相談につながる導線へ改善</div>
+        <p class="result-desc">問い合わせボタン・LINE導線・フォーム・スマホ表示を整え、迷わず相談できる流れを作ります。</p>
       </div>
 
       <!-- カード6 -->
       <div class="result-card card-sns">
-        <img src="assets/images/results/06_sns_promotion_sales_20up.png" alt="SNS・販促改善で売上20%以上アップする集客改善イメージ" loading="lazy">
+        <button class="img-zoom-btn" data-src="assets/images/results/06_sns_promotion_sales_20up.png" aria-label="画像を拡大">
+          <img src="assets/images/results/06_sns_promotion_sales_20up.png" alt="SNS・販促改善で売上20%以上アップする集客改善イメージ" loading="lazy">
+        </button>
         <span class="result-category">SNS運用・販促改善</span>
-        <div class="result-number">売上20%以上アップ</div>
-        <div class="result-title">SNS・販促改善で売上20%以上アップ</div>
-        <p class="result-desc">SNS投稿・LINE配信・販促文を改善し、少ない手間で集客を支援します。投稿を頑張るより、仕組みで売上を狙います。</p>
+        <div class="result-title">販促の手間を減らして集客</div>
+        <p class="result-desc">SNS投稿・LINE配信・キャンペーン文・販促文を整え、少ない手間で売上アップを狙います。</p>
       </div>
 
     </div>
@@ -1305,6 +1361,12 @@
   </div>
 </section>
 
+<!-- ===== LIGHTBOX ===== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="画像拡大表示">
+  <button class="lightbox-close" id="lightboxClose" aria-label="閉じる">&#x2715;</button>
+  <img class="lightbox-img" id="lightboxImg" src="" alt="">
+</div>
+
 <!-- ===== FOOTER ===== -->
 <footer>
   <p>
@@ -1313,6 +1375,7 @@
 </footer>
 
 <script>
+  // ハンバーガーメニュー
   const hamburger = document.getElementById('hamburger');
   const navMenu = document.getElementById('navMenu');
 
@@ -1324,6 +1387,42 @@
     link.addEventListener('click', () => {
       navMenu.classList.remove('open');
     });
+  });
+
+  // ライトボックス
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  function openLightbox(src, alt) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt;
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+    lightboxImg.src = '';
+  }
+
+  document.querySelectorAll('.img-zoom-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const src = btn.dataset.src;
+      const alt = btn.querySelector('img').alt;
+      openLightbox(src, alt);
+    });
+  });
+
+  lightboxClose.addEventListener('click', closeLightbox);
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
   });
 </script>
 
