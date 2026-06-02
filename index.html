@@ -15,15 +15,23 @@
     }
 
     :root {
+      /* ブランドカラー（ナビ・CTA・見出し・背景） */
       --blue: #1E6FD9;
       --blue-dark: #1658b0;
       --blue-light: #2B7FE8;
       --blue-pale: #EBF3FF;
       --blue-pale2: #D6E8FF;
       --blue-border: #C7DDFF;
+      /* AI導入・業務効率化 */
+      --purple: #6D28D9;
+      --purple-light: #7C3AED;
+      --purple-pale: #F5F0FF;
+      --purple-border: #DDD6FE;
+      /* HP改善・問い合わせ導線改善 */
       --pink: #C4447A;
       --pink-pale: #FFF0F7;
       --pink-border: #F4BDD8;
+      /* SNS運用・販促改善 */
       --green: #16A34A;
       --green-pale: #F0FDF4;
       --green-border: #BBF7D0;
@@ -296,7 +304,7 @@
     .result-card {
       border-radius: 18px;
       padding: 26px 22px;
-      border: 2px solid var(--blue-border);
+      border: 2px solid var(--border);
       background: var(--white);
       display: flex;
       flex-direction: column;
@@ -306,8 +314,16 @@
     }
 
     .result-card:hover {
-      box-shadow: 0 8px 28px rgba(30, 111, 217, 0.12);
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
       transform: translateY(-3px);
+    }
+
+    .result-card.card-ai {
+      border-color: var(--purple-border);
+    }
+
+    .result-card.card-ai:hover {
+      box-shadow: 0 8px 28px rgba(109, 40, 217, 0.12);
     }
 
     .result-card.card-hp {
@@ -409,8 +425,8 @@
     }
 
     .card-ai .result-category {
-      background: var(--blue-pale);
-      color: var(--blue);
+      background: var(--purple-pale);
+      color: var(--purple);
     }
 
     .card-hp .result-category {
@@ -449,11 +465,12 @@
     .service-group {
       border-radius: 18px;
       padding: 30px 26px;
-      border: 2px solid var(--blue-border);
+      border: 2px solid var(--border);
       background: var(--white);
     }
 
-    .service-group.group-hp { border-color: var(--pink-border); }
+    .service-group.group-ai  { border-color: var(--purple-border); }
+    .service-group.group-hp  { border-color: var(--pink-border); }
     .service-group.group-sns { border-color: var(--green-border); }
 
     .service-group-icon { font-size: 2rem; margin-bottom: 12px; }
@@ -462,10 +479,11 @@
       font-size: 1.05rem;
       font-weight: 900;
       margin-bottom: 4px;
-      color: var(--blue);
+      color: var(--text-main);
     }
 
-    .group-hp .service-group-title { color: var(--pink); }
+    .group-ai  .service-group-title { color: var(--purple); }
+    .group-hp  .service-group-title { color: var(--pink); }
     .group-sns .service-group-title { color: var(--green); }
 
     .service-group-subtitle {
@@ -491,13 +509,14 @@
 
     .service-list li::before {
       content: "✓";
-      color: var(--blue);
+      color: var(--text-sub);
       font-weight: 900;
       margin-top: 1px;
       flex-shrink: 0;
     }
 
-    .group-hp .service-list li::before { color: var(--pink); }
+    .group-ai  .service-list li::before { color: var(--purple); }
+    .group-hp  .service-list li::before { color: var(--pink); }
     .group-sns .service-list li::before { color: var(--green); }
 
     /* ===== FLOW ===== */
