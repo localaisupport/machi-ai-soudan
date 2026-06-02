@@ -326,31 +326,15 @@
       box-shadow: 0 8px 28px rgba(22, 163, 74, 0.10);
     }
 
-    /* 画像プレースホルダー */
-    .result-img-placeholder {
+    /* カード画像 */
+    .result-card img {
       width: 100%;
-      height: 120px;
-      background: var(--blue-pale);
+      height: auto;
+      display: block;
       border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--text-sub);
-      font-size: 0.75rem;
-      text-align: center;
-      border: 2px dashed var(--blue-border);
+      margin-bottom: 4px;
+      object-fit: cover;
       flex-shrink: 0;
-      line-height: 1.7;
-    }
-
-    .card-hp .result-img-placeholder {
-      background: var(--pink-pale);
-      border-color: var(--pink-border);
-    }
-
-    .card-sns .result-img-placeholder {
-      background: var(--green-pale);
-      border-color: var(--green-border);
     }
 
     .result-category {
@@ -1030,9 +1014,7 @@
 
       <!-- カード1 -->
       <div class="result-card card-ai">
-        <div class="result-img-placeholder">
-          ［画像・図解エリア］<br>後から差し替え可能
-        </div>
+        <img src="assets/images/results/01_inquiry_response_time_70.png" alt="問い合わせ対応時間を70%削減するAI導入イメージ" loading="lazy">
         <span class="result-category">AI導入・業務効率化</span>
         <div class="result-number">70%削減</div>
         <div class="result-title">問い合わせ対応時間を70%削減</div>
@@ -1041,9 +1023,7 @@
 
       <!-- カード2 -->
       <div class="result-card card-ai">
-        <div class="result-img-placeholder">
-          ［画像・図解エリア］<br>後から差し替え可能
-        </div>
+        <img src="assets/images/results/02_no_missed_phone_line_mail.png" alt="電話・LINE・メールの取りこぼしをゼロにするAI対応イメージ" loading="lazy">
         <span class="result-category">AI導入・業務効率化</span>
         <div class="result-number">取りこぼしゼロへ</div>
         <div class="result-title">電話・LINE・メールの取りこぼしをゼロに</div>
@@ -1052,9 +1032,7 @@
 
       <!-- カード3 -->
       <div class="result-card card-ai">
-        <div class="result-img-placeholder">
-          ［画像・図解エリア］<br>後から差し替え可能
-        </div>
+        <img src="assets/images/results/03_estimate_hearing_30h.png" alt="見積前ヒアリング作業を月30時間削減するAI整理イメージ" loading="lazy">
         <span class="result-category">AI導入・業務効率化</span>
         <div class="result-number">月30時間削減</div>
         <div class="result-title">見積前ヒアリング作業を月30時間削減</div>
@@ -1063,9 +1041,7 @@
 
       <!-- カード4 -->
       <div class="result-card card-ai">
-        <div class="result-img-placeholder">
-          ［画像・図解エリア］<br>後から差し替え可能
-        </div>
+        <img src="assets/images/results/04_admin_work_45h.png" alt="事務作業を月45時間削減するAI業務効率化イメージ" loading="lazy">
         <span class="result-category">AI導入・業務効率化</span>
         <div class="result-number">月45時間削減</div>
         <div class="result-title">事務作業を月45時間削減</div>
@@ -1074,9 +1050,7 @@
 
       <!-- カード5 -->
       <div class="result-card card-hp">
-        <div class="result-img-placeholder">
-          ［画像・図解エリア］<br>後から差し替え可能
-        </div>
+        <img src="assets/images/results/05_hp_inquiry_1_8x.png" alt="HP改善で問い合わせ数が1.8倍になる導線改善イメージ" loading="lazy">
         <span class="result-category">HP改善・問い合わせ導線改善</span>
         <div class="result-number">1.8倍</div>
         <div class="result-title">HP改善で問い合わせ数が1.8倍に</div>
@@ -1085,9 +1059,7 @@
 
       <!-- カード6 -->
       <div class="result-card card-sns">
-        <div class="result-img-placeholder">
-          ［画像・図解エリア］<br>後から差し替え可能
-        </div>
+        <img src="assets/images/results/06_sns_promotion_sales_20up.png" alt="SNS・販促改善で売上20%以上アップする集客改善イメージ" loading="lazy">
         <span class="result-category">SNS運用・販促改善</span>
         <div class="result-number">売上20%以上アップ</div>
         <div class="result-title">SNS・販促改善で売上20%以上アップ</div>
